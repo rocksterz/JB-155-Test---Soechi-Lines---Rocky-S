@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="headline">
+            <div class="container">
+                <div class="header-title"><h1>USER LIST</h1></div>
+                <div class="header-tagline"><h3>Random User Generator</h3></div>
+                <br><br>
+                <button type="button" class="btn btn-primary" (click)='RefreshData()'>Refresh Data</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="col-md-6 col-md-offset-3">
+      <table class="table table-bordered">
+        <tr>
+          <th>Avatar Picture</th>                                
+          <th>User Name</th>
+          <th>Email Address</th>
+          <th>Phone Number</th>
+          <th>Search Button</th>
+          <th>Delete Button</th>
+        </tr>
+        <tr *ngFor="let u of Users; index as i">
+            <td><img src="{{ u.Picture }}"></td>           
+            <td>{{ u.Name }}</td>
+            <td>{{ u.Email }}</td>
+            <td>{{ u.Phone }}</td>
+            <td><button type="button" class="btn btn-warning glyphicon glyphicon-search" (click)='SearchData()'>Search</button></td>
+            <td><button type="button" class="btn btn-danger glyphicon glyphicon-trash" (click)='DeleteData(i)'>Delete</button></td>
+        </tr> 
+    </table>
+  </div>
+  
+</body>
+</html>
+
+
+<!-- Yet to be done:
+- search option button on each line
+- when clicked search button, open user page (large picture, user name, phone number, address, email, register date)
+- local storage still needs to be improved  -->

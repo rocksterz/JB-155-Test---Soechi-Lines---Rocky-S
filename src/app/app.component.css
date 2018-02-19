@@ -1,0 +1,42 @@
+body{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13px;
+}
+
+/*HEADER*/
+
+.header {
+    display: block;
+    width: 100%;
+    text-align: center;
+    /* background: url('../assets/bg2.jpg') no-repeat center center scroll; */
+    background-color: black;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.header-title{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    margin-top: 35px;
+}
+
+.header-tagline{
+    color: white;
+}
+
+.profile-image{
+    margin: auto;
+    max-height: 250px;
+    border-radius: 100%;
+    border: 6px solid #E2DBDB;
+}
+
+.data{
+    color: white;
+}
+
+/* HEADER*/
+
